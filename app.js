@@ -8,7 +8,7 @@ async function displayQuote() {
 
     // Preload image
     response = await fetch(quote.image);
-    const image = await response.blob()
+    const image = await response.blob();
     quote.image = URL.createObjectURL(image);
   } catch (error) {
     quote = { text: `Could not get quote: ${error.message}` };
